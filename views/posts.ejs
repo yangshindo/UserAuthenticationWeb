@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+
+<div class="jumbotron text-center">
+  <div class="container">
+    <i class="fas fa-key fa-6x"></i>
+    <br />
+    <h1>Aqui ficam todas as postagens de usuários autenticados.</h1>
+    <a>Ficarão salvas aqui apenas uma postagem por usuário, se quiser alterar a sua é só postar novamente! ;)</a>
+    <br />
+    <% usersWithPosts.forEach(function(user){ %>
+      <p class="secret-text"><%=user.post%></p>
+    <% }) %>
+
+
+    <hr>
+    <a class="btn btn-light btn-lg" href="/logout" role="button">Log out</a>
+    <a class="btn btn-dark btn-lg" href="/submit" role="button">Postar</a>
+  </div>
+</div>
+
+<%- include('partials/footer') %>
